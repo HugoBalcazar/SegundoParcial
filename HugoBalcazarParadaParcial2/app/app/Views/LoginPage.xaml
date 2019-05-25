@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="app.Views.LoginPage">
     <ContentPage.Content>
         <ScrollView>
@@ -19,13 +20,17 @@
                     <Entry
                         Grid.Row="0"
                         Grid.Column="1"
-                        Placeholder="Ingrese su Nota">
+                        Placeholder="Ingrese su Nota"
+                        Text="{Binding Nota, Mode=TwoWay}"
                     </Entry>
                 </Grid>
-                <ActivityIndicator>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}">
                 </ActivityIndicator>
                 <Button
-                    Text=" Login">
+                    Text="Register"
+                    IsEnabled="{Binding IsEnabled}"
+                    Command="{Binding LoginCommand, Mode=TwoWay}">
                 </Button>
 
             </StackLayout>
