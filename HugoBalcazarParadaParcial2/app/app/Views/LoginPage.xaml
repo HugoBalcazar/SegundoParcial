@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.Views.LoginPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Nota:">
+                    </Label>
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Placeholder="Ingrese su Nota">
+                    </Entry>
+                </Grid>
+                <ActivityIndicator>
+                </ActivityIndicator>
+                <Button
+                    Text=" Login">
+                </Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
